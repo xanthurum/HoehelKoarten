@@ -1,7 +1,11 @@
 
+
 public class HoehelKoarten 
 {
-
-	int test;
-	int test2;
+	//private Belgium map;
+	
+	public static void main(String args[]) 
+	{
+		Belgium map = new Belgium();
+	}
 }
