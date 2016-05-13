@@ -7,5 +7,6 @@ public class HoehelKoarten
 	public static void main(String args[]) 
 	{
 		Belgium map = new Belgium();
+		map.shortestPath();
 	}
 }
