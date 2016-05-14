@@ -78,6 +78,7 @@ public class Belgium
 			else
 			{
 				edge.addAttribute("accident", 0);
+				edge.addAttribute("chance", 0.00);
 			}
 		}
 	}
@@ -131,7 +132,10 @@ public class Belgium
 			if(j > 0)
 			{
 				String edge = getEdgeNumber((String)pathList.get(j).getAttribute("label"),(String)pathList.get(j-1).getAttribute("label"));
-				System.out.println("The number of accidents between " + pathList.get(j).getAttribute("label") + " and " + pathList.get(j-1).getAttribute("label") + " are : " + map.getEdge(edge).getAttribute("accident"));
+				checkAccident(map.getEdge(edge));
+				adjustEdgeWeight(map.getEdge(edge));
+				System.out.println("The number of accidents between " + pathList.get(j).getAttribute("label") + " and " + pathList.get(j-1).getAttribute("label") + " are : " 
+				+ map.getEdge(edge).getAttribute("accident") + " the chance for an other one is " + map.getEdge(edge).getAttribute("chance") + " the length is : " + map.getEdge(edge).getAttribute("length"));
 			}
 		}	
 		dijkstra.clear();
@@ -140,8 +144,7 @@ public class Belgium
 	    String answer = scanIn.next();
 		if(answer.equals("yes"))
 		{
-			shortestPath();
-			scanIn.close();
+			shortestPath();	
 		}
 		else System.exit(1);
 	}
@@ -174,5 +177,47 @@ public class Belgium
 		}
 		return Integer.toString(temp);
 	}
-
+	/**
+	 * method to get the result of a check on teh chance of an accident
+	 * @param chance
+	 * @return boolean 
+	 */
+	private void checkAccident(Edge edge)
+	{
+		double chance = (double)edge.getAttribute("chance");
+		double d = Math.random();
+		d = d + chance;
+		if (d  > 0.5) 
+		{
+			double a = Math.random();
+			a = a + chance;
+			if(a < 0.6)
+			{
+				edge.setAttribute("accident", (int)edge.getAttribute("accident")+1);
+			}
+		}
+	}
+	
+	private void adjustEdgeWeight(Edge edge)
+	{
+		int accident = (int)edge.getAttribute("accident");
+		if(accident == 0)
+		{
+			edge.setAttribute("length", (int)edge.getAttribute("length")+1);
+			edge.setAttribute("chance", (double)edge.getAttribute("chance")+0.01);
+		}
+		else if(accident == 1)
+		{
+			edge.setAttribute("length", (int)edge.getAttribute("length")+30);
+			edge.setAttribute("chance", (double)edge.getAttribute("chance")+0.3);
+		}
+		else
+		{
+			for(int i = accident; i > 0; i--)
+			{
+				edge.setAttribute("length", (int)edge.getAttribute("length")+50);
+				edge.setAttribute("chance", (double)edge.getAttribute("chance")+0.5);
+			}
+		}
+	}
 }
