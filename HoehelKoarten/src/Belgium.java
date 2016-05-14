@@ -30,46 +30,46 @@ public class Belgium
 	map.setStrict(false);
 	map.setAutoCreate( true );
 	
-	map.addEdge(Integer.toString(4), "Brugge", "Gent");
-	map.getEdge(Integer.toString(4)).addAttribute("length", 50);
-	map.addEdge(Integer.toString(3), "Brugge", "Kortrijk");
-	map.getEdge(Integer.toString(3)).addAttribute("length", 56);
-	map.addEdge(Integer.toString(5), "Brugge", "Antwerpen");
-	map.getEdge(Integer.toString(5)).addAttribute("length", 95);
-	map.addEdge(Integer.toString(8), "Kortrijk", "Bergen");
-	map.getEdge(Integer.toString(8)).addAttribute("length", 83);
-	map.addEdge(Integer.toString(13), "Gent", "Brussel");
-	map.getEdge(Integer.toString(13)).addAttribute("length", 50);
-	map.addEdge(Integer.toString(7), "Gent", "Antwerpen");
-	map.getEdge(Integer.toString(7)).addAttribute("length", 60);
-	map.addEdge(Integer.toString(14), "Antwerpen", "Brussel");
-	map.getEdge(Integer.toString(14)).addAttribute("length", 44);
-	map.addEdge(Integer.toString(25), "Antwerpen", "Hasselt");
-	map.getEdge(Integer.toString(25)).addAttribute("length", 80);
-	map.addEdge(Integer.toString(19), "Brussel", "Leuven");
-	map.getEdge(Integer.toString(19)).addAttribute("length", 30);
-	map.addEdge(Integer.toString(18), "Brussel", "Waver");
-	map.getEdge(Integer.toString(18)).addAttribute("length", 30);
-	map.addEdge(Integer.toString(16), "Brussel", "Bergen");
-	map.getEdge(Integer.toString(16)).addAttribute("length", 78);
-	map.addEdge(Integer.toString(23), "Bergen", "Namen");
-	map.getEdge(Integer.toString(23)).addAttribute("length", 75);
-	map.addEdge(Integer.toString(29), "Namen", "Neufchateau");
-	map.getEdge(Integer.toString(29)).addAttribute("length", 90);
-	map.addEdge(Integer.toString(38), "Namen", "Luik");
-	map.getEdge(Integer.toString(38)).addAttribute("length", 65);
-	map.addEdge(Integer.toString(25), "Waver", "Namen");
-	map.getEdge(Integer.toString(25)).addAttribute("length", 40);
-	map.addEdge(Integer.toString(29), "Leuven", "Hasselt");
-	map.getEdge(Integer.toString(29)).addAttribute("length", 59);
-	map.addEdge(Integer.toString(30), "Leuven", "Luik");
-	map.getEdge(Integer.toString(30)).addAttribute("length", 82);
-	map.addEdge(Integer.toString(41), "Hasselt", "Luik");
-	map.getEdge(Integer.toString(41)).addAttribute("length", 53);
-	map.addEdge(Integer.toString(33), "Luik", "Neufchateau");
-	map.getEdge(Integer.toString(33)).addAttribute("length", 110);
-	map.addEdge(Integer.toString(52), "Neufchateau", "Aarlen");
-	map.getEdge(Integer.toString(52)).addAttribute("length", 37);
+	map.addEdge(getEdgeNumber("Brugge", "Gent"), "Brugge", "Gent");
+	map.getEdge(getEdgeNumber("Brugge", "Gent")).addAttribute("length", 50);
+	map.addEdge(getEdgeNumber("Brugge", "Kortrijk"), "Brugge", "Kortrijk");
+	map.getEdge(getEdgeNumber("Brugge", "Kortrijk")).addAttribute("length", 56);
+	map.addEdge(getEdgeNumber("Brugge", "Antwerpen"), "Brugge", "Antwerpen");
+	map.getEdge(getEdgeNumber("Brugge", "Antwerpen")).addAttribute("length", 95);
+	map.addEdge(getEdgeNumber("Kortrijk", "Bergen"), "Kortrijk", "Bergen");
+	map.getEdge(getEdgeNumber("Kortrijk", "Bergen")).addAttribute("length", 83);
+	map.addEdge(getEdgeNumber("Gent", "Brussel"), "Gent", "Brussel");
+	map.getEdge(getEdgeNumber("Gent", "Brussel")).addAttribute("length", 50);
+	map.addEdge(getEdgeNumber("Gent", "Antwerpen"), "Gent", "Antwerpen");
+	map.getEdge(getEdgeNumber("Gent", "Antwerpen")).addAttribute("length", 60);
+	map.addEdge(getEdgeNumber("Antwerpen", "Brussel"), "Antwerpen", "Brussel");
+	map.getEdge(getEdgeNumber("Antwerpen", "Brussel")).addAttribute("length", 44);
+	map.addEdge(getEdgeNumber("Antwerpen", "Hasselt"), "Antwerpen", "Hasselt");
+	map.getEdge(getEdgeNumber("Antwerpen", "Hasselt")).addAttribute("length", 80);
+	map.addEdge(getEdgeNumber("Brussel", "Leuven"), "Brussel", "Leuven");
+	map.getEdge(getEdgeNumber("Brussel", "Leuven")).addAttribute("length", 30);
+	map.addEdge(getEdgeNumber("Brussel", "Waver"), "Brussel", "Waver");
+	map.getEdge(getEdgeNumber("Brussel", "Waver")).addAttribute("length", 30);
+	map.addEdge(getEdgeNumber("Brussel", "Bergen"), "Brussel", "Bergen");
+	map.getEdge(getEdgeNumber("Brussel", "Bergen")).addAttribute("length", 78);
+	map.addEdge(getEdgeNumber("Bergen", "Namen"), "Bergen", "Namen");
+	map.getEdge(getEdgeNumber("Bergen", "Namen")).addAttribute("length", 75);
+	map.addEdge(getEdgeNumber("Namen", "Neufchateau"), "Namen", "Neufchateau");
+	map.getEdge(getEdgeNumber("Namen", "Neufchateau")).addAttribute("length", 90);
+	map.addEdge(getEdgeNumber("Namen", "Luik"), "Namen", "Luik");
+	map.getEdge(getEdgeNumber("Namen", "Luik")).addAttribute("length", 65);
+	map.addEdge(getEdgeNumber("Waver", "Namen"), "Waver", "Namen");
+	map.getEdge(getEdgeNumber("Waver", "Namen")).addAttribute("length", 40);
+	map.addEdge(getEdgeNumber("Leuven", "Hasselt"), "Leuven", "Hasselt");
+	map.getEdge(getEdgeNumber("Leuven", "Hasselt")).addAttribute("length", 59);
+	map.addEdge(getEdgeNumber("Leuven", "Luik"), "Leuven", "Luik");
+	map.getEdge(getEdgeNumber("Leuven", "Luik")).addAttribute("length", 82);
+	map.addEdge(getEdgeNumber("Hasselt", "Luik"), "Hasselt", "Luik");
+	map.getEdge(getEdgeNumber("Hasselt", "Luik")).addAttribute("length", 53);
+	map.addEdge(getEdgeNumber("Luik", "Neufchateau"), "Luik", "Neufchateau");
+	map.getEdge(getEdgeNumber("Luik", "Neufchateau")).addAttribute("length", 110);
+	map.addEdge(getEdgeNumber("Neufchateau", "Aarlen"), "Neufchateau", "Aarlen");
+	map.getEdge(getEdgeNumber("Neufchateau", "Aarlen")).addAttribute("length", 37);
 	for(Node node : map)
 	{
 		for(Edge edge : node)
@@ -90,23 +90,7 @@ public class Belgium
 		for(Node n : map)
 		{
 			n.addAttribute("label", n.getId());
-			switch ((String)n.getId())
-			{
-			case "Brugge"		: n.addAttribute("value", 1);	break;
-			case "Kortrijk"		: n.addAttribute("value", 2);	break;
-			case "Gent"			: n.addAttribute("value", 3);	break;
-			case "Antwerpen"	: n.addAttribute("value", 4);	break;
-			case "Brussel"		: n.addAttribute("value", 10);	break;
-			case "Bergen"		: n.addAttribute("value", 6);	break;
-			case "Waver"		: n.addAttribute("value", 8);	break;
-			case "Leuven"		: n.addAttribute("value", 9);	break;
-			case "Hasselt"		: n.addAttribute("value", 20);	break;
-			case "Luik"			: n.addAttribute("value", 21);	break;
-			case "Namen"		: n.addAttribute("value", 17);	break;
-			case "Neufchateau"	: n.addAttribute("value", 12);	break;
-			case "Aarlen"		: n.addAttribute("value", 40);	break;
-			}
-			System.out.println("case nodename : " + n.getAttribute("label")+ " value : " + n.getAttribute("value"));
+			
 			for(Edge e : n)
 			{
 				int x = e.getAttribute("length");
@@ -146,7 +130,7 @@ public class Belgium
 			System.out.println("city : " + node.getAttribute("label"));
 			if(j > 0)
 			{
-				String edge = getEdgeNumber(pathList.get(j),pathList.get(j-1));
+				String edge = getEdgeNumber((String)pathList.get(j).getAttribute("label"),(String)pathList.get(j-1).getAttribute("label"));
 				System.out.println("The number of accidents between " + pathList.get(j).getAttribute("label") + " and " + pathList.get(j-1).getAttribute("label") + " are : " + map.getEdge(edge).getAttribute("accident"));
 			}
 		}	
@@ -167,9 +151,28 @@ public class Belgium
 	 * @param to
 	 * @return
 	 */
-	private String getEdgeNumber(Node from, Node to)
+	private String getEdgeNumber(String from, String to)
 	{
-		return Integer.toString((int)from.getAttribute("value") + (int)to.getAttribute("value"));
+		int temp =0;
+		char[] first = from.toCharArray();
+		for(char n : first)
+		{
+			temp = temp + (int)n;
+		}
+		char[] second = from.toCharArray();
+		for(char n : second)
+		{
+			temp = temp + (int)n;
+		}
+		if(from.charAt(0) > to.charAt(0))
+		{
+			temp = temp + (int)from.charAt(0);
+		}
+		else
+		{
+			temp = temp + (int)to.charAt(0);
+		}
+		return Integer.toString(temp);
 	}
 
 }
